@@ -50,14 +50,17 @@ $obj = new main();
 	class allfunction {
 		
 		// for print 
+
 		static public function printthis($text) {
-		print($text);}
-		
+		print($text);
+		}				
 		
 		//for compare
+
 		static public function compare($text1, $text2)
 		{
 			$result=strnatcasecmp($text1, $text2);
+		
 			if ($result>0)
 			{
 				echo 'the future';
@@ -71,6 +74,7 @@ $obj = new main();
 		}
 
 		//For string match
+
 		static public function match()
 		{
 			$test=date('Y/m/d');
@@ -87,7 +91,9 @@ $obj = new main();
 						print_r($result);
 		}
 		
+		
 		// word count
+
 		static public function wrdcount($text)
 		{
 			echo str_word_count($text);
@@ -95,12 +101,14 @@ $obj = new main();
 		}
 		
 		//into array
+
 		static public function strarr()
 		{
 			$text="2017/09/30";
 			$text_new=explode("/",$text);
 			 print_r($text_new);
 		}
+		
 		//for leap year
 		
 		static public function leap()
