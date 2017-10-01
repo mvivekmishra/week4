@@ -50,17 +50,14 @@ $obj = new main();
 	class allfunction {
 		
 		// for print 
-
 		static public function printthis($text) {
-		print($text);
-		}				
+		print($text);}
+		
 		
 		//for compare
-
 		static public function compare($text1, $text2)
 		{
 			$result=strnatcasecmp($text1, $text2);
-		
 			if ($result>0)
 			{
 				echo 'the future';
@@ -74,7 +71,6 @@ $obj = new main();
 		}
 
 		//For string match
-
 		static public function match()
 		{
 			$test=date('Y/m/d');
@@ -91,9 +87,7 @@ $obj = new main();
 						print_r($result);
 		}
 		
-		
 		// word count
-
 		static public function wrdcount($text)
 		{
 			echo str_word_count($text);
@@ -101,35 +95,49 @@ $obj = new main();
 		}
 		
 		//into array
-
 		static public function strarr()
 		{
 			$text="2017/09/30";
 			$text_new=explode("/",$text);
 			 print_r($text_new);
 		}
-		
 		//for leap year
 		
 		static public function leap()
 		{
-		$years = range(2000, 2017);
-
-		foreach ($years as $year) {
-		$isLeapYear = (bool) date('L', strtotime("$year-01-01"));
-		printf(
-        '%d %s a leap year%s',
-        $year,
-        $isLeapYear ? 'is' : 'is not',
-        PHP_EOL
-    );
+		$date_string=date('Y');
+$result=explode(" ",$date_string);
+print_r($result);
+echo '<br>';
+foreach( $result as $new_year)
+{
+	echo $new_year;
+	}
+	switch($new_year)
+	{
+	
+	case ($new_year) :
+	
+				for($i=$new_year; $i<2026; $i++)  
+					{  
+								if( (0 == $i % 4) and (0 != $i % 100) or (0 == $i % 400) )
+										{  
+											echo 'year : LEAP YEAR'.'<br />';
+				
+										}  
+										else  
+										{  
+											echo 'year: Not leap year'.'<br />';  
+										}  
+					}
+	break;
+	default :
+	echo ' leap year prog end';
+	
+	}
+    
 		
 		}
 		}
 		
-	
-	}  
-	  
-	
-
-?>
+	?>
